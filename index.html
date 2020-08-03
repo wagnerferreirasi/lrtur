@@ -7,6 +7,25 @@
     <title>LR TUR Excursões</title>
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="style/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $window = $(window);
+            //Captura cada elemento section com o data-type "background"
+            $('section[data-type="background"]').each(function () {
+                var $scroll = $(this);
+                //Captura o evento scroll do navegador e modifica o backgroundPosition de acordo com seu deslocamento.
+                $(window).scroll(function () {
+                    var yPos = -($window.scrollTop() / $scroll.data('speed'));
+                    var coords = '50% ' + yPos + 'px';
+                    $scroll.css({
+                        backgroundPosition: coords
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -30,9 +49,6 @@
                         <a class="nav-link" href="#">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Unidades</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">Simular</a>
                     </li>
                     <li class="nav-item">
@@ -41,7 +57,7 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <label class="mr-2">Ratrear Pacote: </label>
-                    <input class="form-control mr-sm-2" type="text" placeholder="CPF, CNPJ ou LRCODE">
+                    <input class="form-control mr-sm-2" type="text" placeholder="cpf, cnpj ou lrcode">
                     <button class="btn btn-primary my-2 my-sm-0" type="submit">Rastear</button>
                 </form>
             </div>
@@ -74,18 +90,43 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
 
+    <div class="container mt-5 mb-5">
+        <div class="card-deck">
+            <div class="card">
+                <img src="./assets/img/c001.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-primary">RASTREADOR</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
             </div>
-            <div class="col-lg-4">
-
+            <div class="card">
+                <img src="./assets/img/c002.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-primary">ROTEIROS</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-4">
-
+            <div class="card">
+                <img src="./assets/img/c003.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-primary">NOTIFICAÇÕES</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                </div>
             </div>
         </div>
+    </div>
+
+    <section id="parallaxBar" class="parallaxBar" data-speed="6" data-type="background">
+        <div class="container-fluid">
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">teste</div>
     </div>
 
     <!-- Optional JavaScript -->
