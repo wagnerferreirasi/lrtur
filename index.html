@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="style/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $window = $(window);
-            //Captura cada elemento section com o data-type "background"
-            $('section[data-type="background"]').each(function () {
-                var $scroll = $(this);
-                //Captura o evento scroll do navegador e modifica o backgroundPosition de acordo com seu deslocamento.
-                $(window).scroll(function () {
-                    var yPos = -($window.scrollTop() / $scroll.data('speed'));
-                    var coords = '50% ' + yPos + 'px';
-                    $scroll.css({
-                        backgroundPosition: coords
-                    });
-                });
-            });
-        });
-    </script>
 </head>
 
 <body>
