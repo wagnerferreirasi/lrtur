@@ -1,11 +1,12 @@
 #parallaxBar {
-  background-image: url(../../assets/img/parallax.jpg);
-  background-position: center top;
+  background-image: url(../../assets/img/parallax1.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding-top: 150px;
   padding-bottom: 150px;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
